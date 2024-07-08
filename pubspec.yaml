@@ -1,0 +1,14 @@
+name: flutter_amplify_app
+description: A Flutter application integrated with AWS Amplify
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.0  # Example dependency
+  amplify_flutter: ^1.0.0-dev.0  # Amplify Flutter SDK
+  # Add other dependencies as needed
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+flutter:
+  uses-material-design: true
+

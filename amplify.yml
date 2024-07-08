@@ -1,0 +1,32 @@
+version: 1
+frontend:
+  phases:
+    # Build and bundle the application
+    build:
+      commands:
+        - cd flutter
+        - flutter pub get
+        - flutter build web --release
+
+  artifacts:
+    # S3 bucket and folder where artifacts should be stored
+    baseDirectory: flutter/build/web
+    files:
+      - '**/*'
+
+# Specifies the backend environment
+backend:
+  phases:
+    # Optional backend configuration (e.g., GraphQL API, authentication, etc.)
+    # Example:
+    #   auth:
+    #     identityPoolAndUserPool:
+    #       identityPoolName: MyIdentityPool
+    #       userPoolName: MyUserPool
+    #       includeIdentityPoolAndUserPool: true
+
+# Specifies how the application will be deployed
+deploy:
+  # The Amplify Console will automatically detect the deployment settings
+  # based on this file. No further configuration is necessary.
+
