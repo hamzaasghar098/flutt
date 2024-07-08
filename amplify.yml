@@ -4,7 +4,7 @@ frontend:
     # Build and bundle the application
     build:
       commands:
-        - cd flutt
+        - cd flutter_amplify_app
         - flutter pub get
         - flutter build web --release
 
